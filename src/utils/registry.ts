@@ -54,10 +54,10 @@ export const getInstallCmd = async (components: string[]) => {
   }
 
   if (packageManager === "pnpm") {
-    return `pnpm dlx solidui-cli@latest@latest add ${componentStr}`;
+    return `pnpm dlx solidui-cli@latest add ${componentStr}`;
   }
 
-  return `npx solidui-cli@latest@latest add ${componentStr}`;
+  return `npx solidui-cli@latest add ${componentStr}`;
 };
 
 export const getInitCmd = async () => {
@@ -68,10 +68,10 @@ export const getInitCmd = async () => {
   }
 
   if (packageManager === "pnpm") {
-    return "pnpm dlx solidui-cli@latest@latest init";
+    return "pnpm dlx solidui-cli@latest init";
   }
 
-  return "npx solidui-cli@latest@latest init";
+  return "npx solidui-cli@latest init";
 };
 
 export const getComponentDocLink = (component: string) => {
