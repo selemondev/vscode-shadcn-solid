@@ -3,7 +3,7 @@
   "displayName": "shadcn/solid",
   "description": "Integrate components and snippets from Shadcn/Solid directly into your IDE.",
   "publisher": "Selemondev",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "repository": {
     "type": "git",
     "url": "https://github.com/selemondev/vscode-shadcn-solid"
@@ -58,6 +58,32 @@
       {
         "language": "typescriptreact",
         "path": "./src/snippets/usage-code-snippets.json"
+      }
+    ],
+    "commands": [
+      {
+        "command": "shadcn-solid.initCli",
+        "title": "shadcn/solid: Install CLI"
+      },
+      {
+        "command": "shadcn-solid.addNewComponent",
+        "title": "shadcn/solid: Add New Component"
+      },
+      {
+        "command": "shadcn-solid.addMultipleComponents",
+        "title": "shadcn/solid: Add Multiple Components"
+      },
+      {
+        "command": "shadcn-solid.gotoComponentDoc",
+        "title": "shadcn/solid: Open Component Documentation"
+      },
+      {
+        "command": "shadcn-solid.reloadComponentList",
+        "title": "shadcn/solid: Reload Component List"
+      },
+      {
+        "command": "shadcn-solid.gotoDoc",
+        "title": "shadcn/solid: Open Documentation"
       }
     ]
   },
