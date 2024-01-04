@@ -1,71 +1,83 @@
-# shadcn-solid README
+<p align="center">
+ <img align="center" src="https://raw.githubusercontent.com/selemondev/vscode-shadcn-solid/master/src/images/icon.png" height="96" />
+ <h1 align="center">
+  shadcn-solid
+ </h1>
+</p>
 
-This is the README for your extension "shadcn-solid". After writing up a brief description, we recommend including the following sections.
+This VSCode extension enables you to install [shadcn/solid](https://solid-ui-components.vercel.app) components directly from your IDE ✨.
 
-## Features
+## Initialize the Shadcn/Solid CLI
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+![to initialize CLI open the command palette and search for shadcn/solid: install cli command](https://raw.githubusercontent.com/selemondev/vscode-shadcn-solid/master/src/assets/images/init-cli.png)
 
-For example if there is an image subfolder under your extension project workspace:
+## Install components
 
-\!\[feature X\]\(images/feature-x.png\)
+![to initialize CLI open the command palette and search for shadcn/solid: add new component](https://raw.githubusercontent.com/selemondev/vscode-shadcn-solid/master/src/assets/images/add-new-component.png)
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+## Choose a component to install from the list
 
-## Requirements
+![choose a component to install from the list](https://raw.githubusercontent.com/selemondev/vscode-shadcn-solid/master/src/assets/images/add-new-component-preview.png)
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+## Install multiple components
 
-## Extension Settings
+![install multiple components](https://raw.githubusercontent.com/selemondev/vscode-shadcn-solid/master/src/assets/images/add-multiple-components.png)
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+## Choose components to install from the list
+![choose components to install from the list](https://raw.githubusercontent.com/selemondev/vscode-shadcn-solid/master/src/assets/images/add-multiple-components-preview.png)
 
-For example:
+## Open the Shadcn-solid documentation
 
-This extension contributes the following settings:
+![open the shadcn-solid documentation](https://raw.githubusercontent.com/selemondev/vscode-shadcn-solid/master/src/assets/images/shadcn-solid-docs.png)
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+## Navigate to a particular component's documentation page
 
-## Known Issues
+![navigate to a particular component's documentation page](https://raw.githubusercontent.com/selemondev/vscode-shadcn-solid/master/src/assets/images/shadcn-solid-component-docs.png)
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+## Shadcn/solid Snippets
 
-## Release Notes
+Easily import and use shadcn-solid components with ease using snippets within VSCode. Just type `cn` or `shadcn` in your solid file and choose from an array of components to use.
 
-Users appreciate release notes as you update your extension.
+![shadcn-solid-snippets-example](https://raw.githubusercontent.com/selemondev/vscode-shadcn-solid/master/src/assets/images/shadcn-solid-import.png)
 
-### 1.0.0
+### How it works
 
-Initial release of ...
+| Snippet           | Description                            |
+| ----------------- | -------------------------------------- |
+| `cn-help`         | How to use shadcn/solid snippets      |
+| `cni-[component]` | Adds imports for the component         |
+| `cnx-[component]` | Adds the markup for the component|
 
-### 1.0.1
+### How to use?
 
-Fixed issue #.
+1. Components
 
-### 1.1.0
+For `Alert` component, type `cni-alert` to add imports in your solid file, and to use the component, use `cnx-alert`.
 
-Added features X, Y, and Z.
+> Similarly, for any other component, use `cni-[component]` to add imports and `cnx-[component]` to use.
 
----
+```tsx
+// cni-alert
+import { Alert, AlertDescription, AlertTitle } from "~/components/ui/alert"
 
-## Following extension guidelines
+// cnx-alert
+<Alert>
+  <AlertTitle>Heads up!</AlertTitle>
+  <AlertDescription>
+    You can add components and dependencies to your app using the cli.
+  </AlertDescription>
+</Alert>
+```
 
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
+### How to contribute?
 
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
+Use this link - [Snippet Generation](https://snippet-generator.app/?description=https%3A%2F%2Fsolid-ui-components.vercel.app%2Fdocs%2Fcomponents&tabtrigger=shadcn-&snippet=&mode=vscode) to generate snippets and add/update them to the `snippets` folder that is located in the `src` accordingly.
 
-## Working with Markdown
 
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
+### Credits 
 
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
+All credits go to the creators of these amazing projects:
 
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+- [Shadcn UI](https://ui.shadcn.com) for creating this beautiful project.
+- [Shadcn solid](https://solid-ui-components.vercel.app/) for creating the Solid port of Shadcn UI.
+- [Kobalte](https://kobalte.dev/docs/core/overview/introduction) for doing all the hard work to make sure components are accessible.

@@ -1,25 +1,122 @@
-// The module 'vscode' contains the VS Code extensibility API
-// Import the module and reference it with the alias vscode in your code below
-import * as vscode from 'vscode';
+import * as vscode from "vscode";
 
-// This method is called when your extension is activated
-// Your extension is activated the very first time the command is executed
+import {
+  getInitCmd,
+  getInstallCmd,
+  getComponentDocLink,
+  getRegistry,
+  shadCnDocUrl,
+} from "./utils/registry";
+import { executeCommand } from "./utils/vscode";
+import type { Components } from "./utils/registry";
+
+const commands = {
+  initCli: "shadcn-solid.initCli",
+  addNewComponent: "shadcn-solid.addNewComponent",
+  addMultipleComponents: "shadcn-solid.addMultipleComponents",
+  gotoComponentDoc: "shadcn-solid.gotoComponentDoc",
+  reloadComponentList: "shadcn-solid.reloadComponentList",
+  gotoDoc: "shadcn-solid.gotoDoc",
+} as const;
+
 export function activate(context: vscode.ExtensionContext) {
+  let registryData: Components;
 
-	// Use the console to output diagnostic information (console.log) and errors (console.error)
-	// This line of code will only be executed once when your extension is activated
-	console.log('Congratulations, your extension "shadcn-solid" is now active!');
+  const disposables: vscode.Disposable[] = [
+    vscode.commands.registerCommand(commands.initCli, async () => {
+      const intCmd = await getInitCmd();
+      executeCommand(intCmd);
+    }),
+    vscode.commands.registerCommand(commands.addNewComponent, async () => {
+      if (!registryData) {
+        const newRegistryData = await getRegistry();
 
-	// The command has been defined in the package.json file
-	// Now provide the implementation of the command with registerCommand
-	// The commandId parameter must match the command field in package.json
-	let disposable = vscode.commands.registerCommand('shadcn-solid.helloWorld', () => {
-		// The code you place here will be executed every time your command is executed
-		// Display a message box to the user
-		vscode.window.showInformationMessage('Hello World from vscode-shadcn-solid!');
-	});
+        if (!newRegistryData) {
+          vscode.window.showErrorMessage("Can not get the component list");
+          return;
+        }
 
-	context.subscriptions.push(disposable);
+        registryData = newRegistryData;
+      }
+
+      const selectedComponent = await vscode.window.showQuickPick(registryData, {
+        matchOnDescription: true,
+      });
+
+      if (!selectedComponent) {
+        return;
+      }
+
+      const installCmd = await getInstallCmd([selectedComponent.label]);
+      executeCommand(installCmd);
+    }),
+
+    vscode.commands.registerCommand(commands.addMultipleComponents, async () => {
+      if (!registryData) {
+        const newRegistryData = await getRegistry();
+
+        if (!newRegistryData) {
+          vscode.window.showErrorMessage("Can not get the component list");
+          return;
+        }
+
+        registryData = newRegistryData;
+      }
+
+      const selectedComponents = await vscode.window.showQuickPick(registryData, {
+        matchOnDescription: true,
+        canPickMany: true,
+      });
+
+      if (!selectedComponents) {
+        return;
+      }
+
+      const selectedComponent = selectedComponents.map((component) => component.label);
+
+      const installCmd = await getInstallCmd(selectedComponent);
+      executeCommand(installCmd);
+    }),
+    vscode.commands.registerCommand(commands.gotoComponentDoc, async () => {
+      if (!registryData) {
+        const newRegistryData = await getRegistry();
+
+        if (!newRegistryData) {
+          vscode.window.showErrorMessage("Can not get the component list");
+          return;
+        }
+
+        registryData = newRegistryData;
+      }
+
+      const selectedComponent = await vscode.window.showQuickPick(registryData, {
+        matchOnDescription: true,
+      });
+
+      if (!selectedComponent) {
+        return;
+      }
+
+      const componentDocLink = getComponentDocLink(selectedComponent.label);
+      vscode.env.openExternal(vscode.Uri.parse(componentDocLink));
+    }),
+    vscode.commands.registerCommand(commands.reloadComponentList, async () => {
+      const newRegistryData = await getRegistry();
+
+      if (!newRegistryData) {
+        vscode.window.showErrorMessage("Can not get the component list");
+        return;
+      }
+
+      registryData = newRegistryData;
+      vscode.window.showInformationMessage("shadcn/solid: Reloaded components");
+    }),
+    vscode.commands.registerCommand(commands.gotoDoc, async () => {
+      vscode.env.openExternal(vscode.Uri.parse(shadCnDocUrl));
+    }),
+  ];
+
+  context.subscriptions.push(...disposables);
 }
 
 // This method is called when your extension is deactivated

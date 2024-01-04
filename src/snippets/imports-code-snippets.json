@@ -1,0 +1,415 @@
+{
+    "Accordion": {
+        "prefix": [
+            "shadcn-i-accordion",
+            "cni-accordion"
+        ],
+        "body": [
+            "import {",
+            "  Accordion,",
+            "  AccordionContent,",
+            "  AccordionItem,",
+            "  AccordionTrigger",
+            "} from \"~/components/ui/accordion\""
+        ],
+        "description": "https://solid-ui-components.vercel.app/docs/components/button.html"
+    },
+    "Alert": {
+        "prefix": [
+            "shadcn-i-alert",
+            "cni-alert"
+        ],
+        "body": [
+            "import { Alert, AlertDescription, AlertTitle } from \"~/components/ui/alert\""
+        ],
+        "description": "https://solid-ui-components.vercel.app/docs/components/alert.html"
+    },
+    "Alert Dialog": {
+        "prefix": [
+            "shadcn-i-alert-dialog",
+            "cni-alert-dialog"
+        ],
+        "body": [
+            "import {",
+            "  AlertDialog,",
+            "  AlertDialogContent,",
+            "  AlertDialogDescription,",
+            "  AlertDialogTitle,",
+            "  AlertDialogTrigger",
+            "} from \"~/registry/ui/alert-dialog\""
+        ],
+        "description": "https://solid-ui-components.vercel.app/docs/components/alert-dialog.html"
+    },
+    "Avatar": {
+        "prefix": [
+            "shadcn-i-avatar",
+            "cni-avatar"
+        ],
+        "body": [
+            "import { Avatar, AvatarFallback, AvatarImage } from \"~/components/ui/avatar\""
+        ],
+        "description": "https://solid-ui-components.vercel.app/docs/components/avatar.html"
+    },
+    "Badge": {
+        "prefix": [
+            "shadcn-i-badge",
+            "cni-badge"
+        ],
+        "body": [
+            "import { Badge } from \"~/components/ui/badge\"",
+            ""
+        ],
+        "description": "https://solid-ui-components.vercel.app/docs/components/badge.html"
+    },
+    "Button": {
+        "prefix": [
+            "shadcn-i-button",
+            "cni-button"
+        ],
+        "body": [
+            "import { Button } from \"~/components/ui/button\"",
+            ""
+        ],
+        "description": "https://solid-ui-components.vercel.app/docs/components/button.html"
+    },
+    "Callout": {
+        "prefix": [
+            "shadcn-i-callout",
+            "cni-callout"
+        ],
+        "body": [
+            "import { Callout, CalloutContent, CalloutTitle } from \"~/components/ui/callout\"",
+            ""
+        ],
+        "description": "https://solid-ui-components.vercel.app/docs/components/callout.html"
+    },
+    "Card": {
+        "prefix": [
+            "shadcn-i-card",
+            "cni-card"
+        ],
+        "body": [
+            "import {",
+            "  Card,",
+            "  CardContent,",
+            "  CardDescription,",
+            "  CardFooter,",
+            "  CardHeader,",
+            "  CardTitle",
+            "} from \"~/components/ui/card\"",
+            ""
+        ],
+        "description": "https://solid-ui-components.vercel.app/docs/components/card.html"
+    },
+    "Checkbox": {
+        "prefix": [
+            "shadcn-i-checkbox",
+            "cni-checkbox"
+        ],
+        "body": [
+            "import { Checkbox } from \"~/components/ui/checkbox\"",
+            ""
+        ],
+        "description": "https://solid-ui-components.vercel.app/docs/components/checkbox.html"
+    },
+    "Collapsible": {
+        "prefix": [
+            "shadcn-i-collapsible",
+            "cni-collapsible"
+        ],
+        "body": [
+            "import { Collapsible, CollapsibleContent, CollapsibleTrigger } from \"~/components/ui/collapsible\"",
+            ""
+        ],
+        "description": "https://solid-ui-components.vercel.app/docs/components/collapsible.html"
+    },
+    "Context Menu": {
+        "prefix": [
+            "shadcn-i-context-menu",
+            "cni-context-menu"
+        ],
+        "body": [
+            "import {",
+            "  ContextMenu,",
+            "  ContextMenuContent,",
+            "  ContextMenuItem,",
+            "  ContextMenuLabel,",
+            "  ContextMenuSeparator,",
+            "  ContextMenuTrigger",
+            "} from \"~/components/ui/context-menu\"",
+            ""
+        ],
+        "description": "https://solid-ui-components.vercel.app/docs/components/context-menu.html"
+    },
+    "Delta Bar": {
+        "prefix": [
+            "shadcn-i-delta-bar",
+            "cni-delta-bar"
+        ],
+        "body": [
+            "import { DeltaBar } from \"~/components/ui/delta-bar\"",
+            ""
+        ],
+        "description": "https://solid-ui-components.vercel.app/docs/components/delta-bar.html"
+    },
+    "Dialog": {
+        "prefix": [
+            "shadcn-i-dialog",
+            "cni-dialog"
+        ],
+        "body": [
+            "import {",
+            "  Dialog,",
+            "  DialogTrigger,",
+            "  DialogContent,",
+            "  DialogHeader,",
+            "  DialogFooter,",
+            "  DialogTitle,",
+            "  DialogDescription",
+            "} from \"~/components/ui/dialog\"",
+            ""
+        ],
+        "description": "https://solid-ui-components.vercel.app/docs/components/dialog.html"
+    },
+    "Dropdown Menu": {
+        "prefix": [
+            "shadcn-i-dropdown-menu",
+            "cni-dropdown-menu"
+        ],
+        "body": [
+            "import {",
+            "  DropdownMenu,",
+            "  DropdownMenuContent,",
+            "  DropdownMenuItem,",
+            "  DropdownMenuLabel,",
+            "  DropdownMenuSeparator,",
+            "  DropdownMenuTrigger",
+            "} from \"~/components/ui/dropdown-menu\"",
+            ""
+        ],
+        "description": "https://solid-ui-components.vercel.app/docs/components/dropdown-menu.html"
+    },
+    "Hover Card": {
+        "prefix": [
+            "shadcn-i-hover-card",
+            "cni-hover-card"
+        ],
+        "body": [
+            "import { HoverCard, HoverCardContent, HoverCardTrigger } from \"~/components/ui/hover-card\"",
+            ""
+        ],
+        "description": "https://solid-ui-components.vercel.app/docs/components/hover-card.html"
+    },
+    "Input": {
+        "prefix": [
+            "shadcn-i-input",
+            "cni-input"
+        ],
+        "body": [
+            "import { Input } from \"~/components/ui/input\"",
+            ""
+        ],
+        "description": "https://solid-ui-components.vercel.app/docs/components/input.html"
+    },
+    "Label": {
+        "prefix": [
+            "shadcn-i-label",
+            "cni-label"
+        ],
+        "body": [
+            "import { Label } from \"~/components/ui/label\"",
+            ""
+        ],
+        "description": "https://solid-ui-components.vercel.app/docs/components/label.html"
+    },
+    "Pagination": {
+        "prefix": [
+            "shadcn-i-pagination",
+            "cni-pagination"
+        ],
+        "body": [
+            "import {",
+            "  Pagination,",
+            "  PaginationContent,",
+            "  PaginationEllipsis,",
+            "  PaginationItem,",
+            "  PaginationLink,",
+            "  PaginationNext,",
+            "  PaginationPrevious",
+            "} from \"~/components/ui/pagination\"",
+            ""
+        ],
+        "description": "https://solid-ui-components.vercel.app/docs/components/pagination.html"
+    },
+    "Popover": {
+        "prefix": [
+            "shadcn-i-popover",
+            "cni-popover"
+        ],
+        "body": [
+            "import { Popover, PopoverContent, PopoverTrigger } from \"~/components/ui/popover\"",
+            ""
+        ],
+        "description": "https://solid-ui-components.vercel.app/docs/components/popover.html"
+    },
+    "Progress": {
+        "prefix": [
+            "shadcn-i-progress",
+            "cni-progress"
+        ],
+        "body": [
+            "import { Progress, ProgressValue, ProgressValueLabel } from \"~/components/ui/progress\"",
+            ""
+        ],
+        "description": "https://solid-ui-components.vercel.app/docs/components/progress.html"
+    },
+    "Radio Group": {
+        "prefix": [
+            "shadcn-i-radio-group",
+            "cni-radio-group"
+        ],
+        "body": [
+            "import { RadioGroup, RadioGroupItem, RadioGroupItemLabel } from \"~/components/ui/radio-group\"",
+            ""
+        ],
+        "description": "https://solid-ui-components.vercel.app/docs/components/radio-group.html"
+    },
+    "Select": {
+        "prefix": [
+            "cni-select"
+        ],
+        "body": [
+            "import {",
+            "  Select,",
+            "  SelectContent,",
+            "  SelectItem,",
+            "  SelectTrigger,",
+            "  SelectValue",
+            "} from \"~/components/ui/select\"",
+            ""
+        ],
+        "description": "https://solid-ui-components.vercel.app/docs/components/select.html"
+    },
+    "Separator": {
+        "prefix": [
+            "shadcn-i-separator",
+            "cni-separator"
+        ],
+        "body": [
+            "import { Separator } from \"~/components/ui/separator\"",
+            ""
+        ],
+        "description": "https://solid-ui-components.vercel.app/docs/components/separator.html"
+    },
+    "Sheet": {
+        "prefix": [
+            "shadcn-i-sheet",
+            "cni-sheet"
+        ],
+        "body": [
+            "import {",
+            "  Sheet,",
+            "  SheetContent,",
+            "  SheetDescription,",
+            "  SheetHeader,",
+            "  SheetTitle,",
+            "  SheetTrigger",
+            "} from \"~/components/ui/sheet\"",
+            ""
+        ],
+        "description": "https://solid-ui-components.vercel.app/docs/components/sheet.html"
+    },
+    "Skeleton": {
+        "prefix": [
+            "shadcn-i-skeleton",
+            "cni-skeleton"
+        ],
+        "body": [
+            "import { Skeleton } from \"~/components/ui/skeleton\"",
+            ""
+        ],
+        "description": "https://solid-ui-components.vercel.app/docs/components/skeleton.html"
+    },
+    "Slider": {
+        "prefix": [
+            "shadcn-i-slider",
+            "cni-slider"
+        ],
+        "body": [
+            "import { Slider, SliderFill, SliderThumb, SliderTrack } from \"~/components/ui/slider\"",
+            ""
+        ],
+        "description": "https://solid-ui-components.vercel.app/docs/components/slider.html"
+    },
+    "Switch": {
+        "prefix": [
+            "shadcn-i-switch",
+            "cni-switch"
+        ],
+        "body": [
+            "import { Switch } from \"~/components/ui/switch\"",
+            ""
+        ],
+        "description": "https://solid-ui-components.vercel.app/docs/components/switch.html"
+    },
+    "Table": {
+        "prefix": [
+            "shadcn-i-table",
+            "cni-table"
+        ],
+        "body": [
+            "import {",
+            "  Table,",
+            "  TableBody,",
+            "  TableCaption,",
+            "  TableCell,",
+            "  TableHead,",
+            "  TableHeader,",
+            "  TableRow",
+            "} from \"~/components/ui/table\"",
+            ""
+        ],
+        "description": "https://solid-ui-components.vercel.app/docs/components/table.html"
+    },
+    "Tabs": {
+        "prefix": [
+            "shadcn-i-tabs",
+            "cni-tabs"
+        ],
+        "body": [
+            "import { Tabs, TabsContent, TabsList, TabsTrigger } from \"~/components/ui/tabs\"",
+            ""
+        ],
+        "description": "https://solid-ui-components.vercel.app/docs/components/tabs.html"
+    },
+    "Textarea": {
+        "prefix": [
+            "shadcn-i-textarea",
+            "cni-textarea"
+        ],
+        "body": [
+            "import { Textarea } from \"~/components/ui/textarea\"",
+            ""
+        ],
+        "description": "https://solid-ui-components.vercel.app/docs/components/textarea.html"
+    },
+
+    "Timeline": {
+        "prefix": ["shadcn-i-timeline", "cni-timeline"],
+        "body": [
+            "import { Timeline } from \"~/components/ui/timeline\""
+        ],
+        "description": "https://solid-ui-components.vercel.app/docs/components/timeline.html"
+    },
+    "Tooltip": {
+        "prefix": [
+            "shadcn-i-tooltip",
+            "cni-tooltip"
+        ],
+        "body": [
+            "import { Tooltip, TooltipContent, TooltipTrigger } from \"~/components/ui/tooltip\"",
+            ""
+        ],
+        "description": "https://solid-ui-components.vercel.app/docs/components/tooltip.html"
+    }
+}
