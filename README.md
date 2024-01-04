@@ -1,5 +1,5 @@
 <p align="center">
- <img align="center" src="https://raw.githubusercontent.com/selemondev/vscode-shadcn-solid/master/src/images/icon.png" height="96" />
+ <img align="center" src="https://raw.githubusercontent.com/selemondev/vscode-shadcn-solid/master/src/images/logo.png" height="96" />
  <h1 align="center">
   shadcn-solid
  </h1>
