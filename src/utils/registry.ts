@@ -15,7 +15,7 @@ type Component = {
   detail?: string;
 };
 
-export const shadCnDocUrl = "https://solid-ui-components.vercel.app/docs";
+export const shadCnDocUrl = "https://solid-ui-components.vercel.app/docs/introduction";
 
 export type Components = Component[];
 
