@@ -52,7 +52,7 @@ Easily import and use shadcn-solid components with ease using snippets within VS
 
 1. Components
 
-For `Alert` component, type `cni-alert` to add imports in your solid file, and to use the component, use `cnx-alert`.
+For `Alert` component, type `cni-alert` to add imports in your Solid file, and to use the component, use `cnx-alert`.
 
 > Similarly, for any other component, use `cni-[component]` to add imports and `cnx-[component]` to use.
 
