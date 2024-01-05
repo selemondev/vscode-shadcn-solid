@@ -3,7 +3,7 @@
   "displayName": "shadcn/solid",
   "description": "Integrate components and snippets from Shadcn/Solid directly into your IDE.",
   "publisher": "Selemondev",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "repository": {
     "type": "git",
     "url": "https://github.com/selemondev/vscode-shadcn-solid"
