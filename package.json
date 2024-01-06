@@ -3,7 +3,7 @@
   "displayName": "shadcn/solid",
   "description": "Integrate components and snippets from Shadcn/Solid directly into your IDE.",
   "publisher": "Selemondev",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "repository": {
     "type": "git",
     "url": "https://github.com/selemondev/vscode-shadcn-solid"
@@ -89,6 +89,7 @@
   },
   "scripts": {
     "vscode:prepublish": "yarn run package",
+    "vscode:publish": "bumpp && vscode:prepublish && vsce publish",
     "compile": "webpack",
     "watch": "webpack --watch",
     "package": "webpack --mode production --devtool hidden-source-map",
@@ -103,6 +104,7 @@
     "@types/vscode": "^1.85.0",
     "@typescript-eslint/eslint-plugin": "^6.13.1",
     "@typescript-eslint/parser": "^6.13.1",
+    "bumpp": "^9.2.1",
     "eslint": "^8.54.0",
     "ts-loader": "^9.5.1",
     "typescript": "^5.3.2",
