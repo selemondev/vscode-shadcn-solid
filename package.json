@@ -89,8 +89,7 @@
   },
   "scripts": {
     "vscode:prepublish": "yarn run package",
-    "vscode:publish": "bumpp && vscode:prepublish && vsce publish && vscode:commit-push",
-    "vscode:commit-push": "git add . && git commit -m 'chore: version bump' && git push",
+    "vscode:publish": "bumpp && vscode:prepublish && vsce publish",
     "compile": "webpack",
     "watch": "webpack --watch",
     "package": "webpack --mode production --devtool hidden-source-map",
