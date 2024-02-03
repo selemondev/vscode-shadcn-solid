@@ -88,9 +88,11 @@
     ]
   },
   "scripts": {
-    "vscode:prepublish": "pnpm run package",
-    "vscode:publish": "vsce publish --no-dependencies",
-    "package": "tsup",
+    "vscode:prepublish": "pnpm build",
+    "generate:release": "npx changelogen@latest --release",
+    "build": "tsup",
+    "dev": "pnpm build -- --watch",
+    "deploy": "vsce publish --no-dependencies",
     "lint": "eslint src --ext ts"
   },
   "devDependencies": {
