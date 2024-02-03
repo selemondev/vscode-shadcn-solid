@@ -3,7 +3,7 @@
 out/**
 node_modules/**
 .gitignore
-.yarnrc
+.npmrc
 webpack.config.js
 vsc-extension-quickstart.md
 **/tsconfig.json
