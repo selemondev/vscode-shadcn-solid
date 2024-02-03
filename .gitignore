@@ -4,6 +4,7 @@ node_modules
 .vscode-test/
 *.vsix
 .env
+.npmrc
 *.log*
 .eslintcache
 *.DS_Store
