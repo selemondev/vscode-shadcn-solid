@@ -44,7 +44,7 @@ Easily import and use shadcn-solid components with ease using snippets within VS
 
 | Snippet           | Description                            |
 | ----------------- | -------------------------------------- |
-| `cn-help`         | How to use shadcn/solid snippets      |
+| `cn-help`         | How to use shadcn/solid snippets       |
 | `cni-[component]` | Adds imports for the component         |
 | `cnx-[component]` | Adds the markup for the component|
 
@@ -70,6 +70,10 @@ import { Alert, AlertDescription, AlertTitle } from "~/components/ui/alert"
 ```
 
 ### How to contribute?
+
+Contributions are welcome and encouraged! If you have any ideas or suggestions for new features, or if you encounter any bugs or issues, please open an issue or submit a pull request on the GitHub repository. 
+
+Developers interested in contributing should read the [Code of Conduct](./CODE_OF_CONDUCT.md) and the [Contributing Guide](./CONTRIBUTING.md).
 
 Use this link - [Snippet Generation](https://snippet-generator.app/?description=https%3A%2F%2Fsolid-ui-components.vercel.app%2Fdocs%2Fcomponents&tabtrigger=shadcn-&snippet=&mode=vscode) to generate snippets and add/update them to the `snippets` folder that is located in the `src` accordingly.
 
