@@ -4,6 +4,31 @@ All notable changes to the "shadcn-solid" extension will be documented in this f
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## v0.0.8
+
+[compare changes](https://github.com/selemondev/vscode-shadcn-solid/compare/v0.0.1...v0.0.8)
+
+### 🚀 Enhancements
+
+- **bundler:** Migrate from webpack to tsup ([ea4bc01](https://github.com/selemondev/vscode-shadcn-solid/commit/ea4bc01))
+
+### 🩹 Fixes
+
+- **app:** Shadcn doc url ([36a9f6d](https://github.com/selemondev/vscode-shadcn-solid/commit/36a9f6d))
+
+### 🏡 Chore
+
+- **release:** V0.0.6 ([f5e0094](https://github.com/selemondev/vscode-shadcn-solid/commit/f5e0094))
+- Release v0.0.7 ([2b327e2](https://github.com/selemondev/vscode-shadcn-solid/commit/2b327e2))
+- Release v0.0.7 ([4e53161](https://github.com/selemondev/vscode-shadcn-solid/commit/4e53161))
+- Bumpp version and add script ([b39200d](https://github.com/selemondev/vscode-shadcn-solid/commit/b39200d))
+- Add codeowner ([f25b51c](https://github.com/selemondev/vscode-shadcn-solid/commit/f25b51c))
+- Update LICENSE ([8c2fa2c](https://github.com/selemondev/vscode-shadcn-solid/commit/8c2fa2c))
+
+### ❤️ Contributors
+
+- Selemondev <selemondev19@gmail.com>
+
 ## v0.0.6
 
 
