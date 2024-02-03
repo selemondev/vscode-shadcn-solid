@@ -89,10 +89,9 @@
   },
   "scripts": {
     "vscode:prepublish": "pnpm run package",
-    "vscode:publish": "vscode:prepublish && vsce publish",
+    "vscode:publish": "vsce publish --no-dependencies",
     "package": "tsup",
-    "lint": "eslint src --ext ts",
-    "test": "vscode-test"
+    "lint": "eslint src --ext ts"
   },
   "devDependencies": {
     "@types/node": "18.x",
