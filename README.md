@@ -34,6 +34,12 @@ This VSCode extension enables you to install [shadcn/solid](https://solid-ui-com
 
 ![navigate to a particular component's documentation page](https://raw.githubusercontent.com/selemondev/vscode-shadcn-solid/master/src/assets/images/shadcn-solid-component-docs.png)
 
+## Choose a UI framework
+![choose a ui framework of your choice](https://raw.githubusercontent.com/selemondev/vscode-shadcn-solid/master/src/assets/images/choose-ui-framework.png)
+
+![choose a ui framework of your choice](https://raw.githubusercontent.com/selemondev/vscode-shadcn-solid/master/src/assets/images/ui-framework.png)
+
+
 ## Shadcn/solid Snippets
 
 Easily import and use shadcn-solid components with ease using snippets within VSCode. Just type `cn` or `shadcn` in your solid file and choose from an array of components to use.
@@ -45,8 +51,11 @@ Easily import and use shadcn-solid components with ease using snippets within VS
 | Snippet           | Description                            |
 | ----------------- | -------------------------------------- |
 | `cn-help`         | How to use shadcn/solid snippets       |
-| `cni-[component]` | Adds imports for the component         |
-| `cnx-[component]` | Adds the markup for the component|
+| `cns-help`         | How to use solid ui snippets       |
+| `cni-[component]` | Adds imports for the component ( Shadcn Solid )         |
+| `solid-ui-i-[component]` | Adds imports for the component ( Solid UI )   |
+| `cnx-[component]` | Adds the markup for the component (Shadcn Solid ) |
+| `solid-ui-x-[component]` | Adds the markup for the component (Solid UI ) |
 
 ### How to use?
 
@@ -57,10 +66,21 @@ For `Alert` component, type `cni-alert` to add imports in your Solid file, and t
 > Similarly, for any other component, use `cni-[component]` to add imports and `cnx-[component]` to use.
 
 ```tsx
-// cni-alert
+// cni-alert - Shadcn Solid
 import { Alert, AlertDescription, AlertTitle } from "~/components/ui/alert"
 
-// cnx-alert
+// solid-ui-i-alert - Solid UI
+import { Alert, AlertDescription, AlertTitle } from "~/components/ui/alert"
+
+// cnx-alert - Shadcn Solid
+<Alert>
+  <AlertTitle>Heads up!</AlertTitle>
+  <AlertDescription>
+    You can add components and dependencies to your app using the cli.
+  </AlertDescription>
+</Alert>
+
+// solid-ui-x-alert - Solid UI
 <Alert>
   <AlertTitle>Heads up!</AlertTitle>
   <AlertDescription>

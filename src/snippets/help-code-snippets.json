@@ -12,7 +12,7 @@
     },
   
     "shadcn/solid help shadcn": {
-      "prefix": ["cns-help"],
+      "prefix": ["cn-help"],
       "body": [
         "// shadcn-i-[component] e.g. shadcn-i-button",
         "import { Button } from ~/components/ui/button'",
