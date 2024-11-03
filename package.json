@@ -84,15 +84,20 @@
       {
         "command": "shadcn-solid.gotoDoc",
         "title": "shadcn/solid: Open Documentation"
+      },
+      {
+        "command": "shadcn-solid.select-ui-framework",
+        "title": "shadcn/solid: Select UI framework"
       }
     ]
   },
   "scripts": {
     "vscode:prepublish": "pnpm build",
-    "generate:release": "npx changelogen@latest --release",
-    "build": "tsup",
+    "generate:release": "npx changelogen@latest --major --release",
+    "check-types": "tsc --noEmit",
+    "build": "pnpm run lint && node esbuild.js --production",
     "dev": "pnpm build -- --watch",
-    "deploy": "vsce publish --no-dependencies",
+    "deploy:extension": "vsce publish --no-dependencies",
     "lint": "eslint src --ext ts"
   },
   "devDependencies": {
@@ -100,6 +105,7 @@
     "@types/vscode": "^1.95.0",
     "@typescript-eslint/eslint-plugin": "^8.12.2",
     "@typescript-eslint/parser": "^8.12.2",
+    "esbuild": "^0.24.0",
     "eslint": "^9.14.0",
     "tsup": "^8.3.5",
     "typescript": "^5.6.3"
