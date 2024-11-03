@@ -1,45 +1,50 @@
-import * as vscode from "vscode";
+import { commands, window, env, Uri } from "vscode";
+import type { ExtensionContext, Disposable } from "vscode";
 
 import {
   getInitCmd,
   getInstallCmd,
   getComponentDocLink,
   getRegistry,
-  shadCnDocUrl,
 } from "./utils/registry";
 import { executeCommand } from "./utils/vscode";
 import type { Components } from "./utils/registry";
+import { getLocalStorageValue } from "./utils/getLocalStorageValue";
+import { LocalStorageService } from "./utils/localStorageService";
 
-const commands = {
+const extCommands = {
   initCli: "shadcn-solid.initCli",
   addNewComponent: "shadcn-solid.addNewComponent",
   addMultipleComponents: "shadcn-solid.addMultipleComponents",
   gotoComponentDoc: "shadcn-solid.gotoComponentDoc",
   reloadComponentList: "shadcn-solid.reloadComponentList",
+  selectUIFramework: "shadcn-solid.select-ui-framework",
   gotoDoc: "shadcn-solid.gotoDoc",
-} as const;
+} as const; 
 
-export function activate(context: vscode.ExtensionContext) {
+export function activate(context: ExtensionContext) {
   let registryData: Components;
 
-  const disposables: vscode.Disposable[] = [
-    vscode.commands.registerCommand(commands.initCli, async () => {
-      const intCmd = await getInitCmd();
+  const localStorageVal = getLocalStorageValue(context.globalState);
+
+  const disposables: Disposable[] = [
+    commands.registerCommand(extCommands.initCli, async () => {
+      const intCmd = await getInitCmd(localStorageVal);
       executeCommand(intCmd);
     }),
-    vscode.commands.registerCommand(commands.addNewComponent, async () => {
+    commands.registerCommand(extCommands.addNewComponent, async () => {
       if (!registryData) {
-        const newRegistryData = await getRegistry();
+        const newRegistryData = await getRegistry(localStorageVal);
 
         if (!newRegistryData) {
-          vscode.window.showErrorMessage("Can not get the component list");
+          window.showErrorMessage("Can not get the component list");
           return;
         }
 
         registryData = newRegistryData;
       }
 
-      const selectedComponent = await vscode.window.showQuickPick(registryData, {
+      const selectedComponent = await window.showQuickPick(registryData, {
         matchOnDescription: true,
       });
 
@@ -47,23 +52,23 @@ export function activate(context: vscode.ExtensionContext) {
         return;
       }
 
-      const installCmd = await getInstallCmd([selectedComponent.label]);
+      const installCmd = await getInstallCmd([selectedComponent.label], localStorageVal);
       executeCommand(installCmd);
     }),
 
-    vscode.commands.registerCommand(commands.addMultipleComponents, async () => {
+    commands.registerCommand(extCommands.addMultipleComponents, async () => {
       if (!registryData) {
-        const newRegistryData = await getRegistry();
+        const newRegistryData = await getRegistry(localStorageVal);
 
         if (!newRegistryData) {
-          vscode.window.showErrorMessage("Can not get the component list");
+          window.showErrorMessage("Can not get the component list");
           return;
         }
 
         registryData = newRegistryData;
       }
 
-      const selectedComponents = await vscode.window.showQuickPick(registryData, {
+      const selectedComponents = await window.showQuickPick(registryData, {
         matchOnDescription: true,
         canPickMany: true,
       });
@@ -74,22 +79,22 @@ export function activate(context: vscode.ExtensionContext) {
 
       const selectedComponent = selectedComponents.map((component) => component.label);
 
-      const installCmd = await getInstallCmd(selectedComponent);
+      const installCmd = await getInstallCmd(selectedComponent, localStorageVal);
       executeCommand(installCmd);
     }),
-    vscode.commands.registerCommand(commands.gotoComponentDoc, async () => {
+    commands.registerCommand(extCommands.gotoComponentDoc, async () => {
       if (!registryData) {
-        const newRegistryData = await getRegistry();
+        const newRegistryData = await getRegistry(localStorageVal);
 
         if (!newRegistryData) {
-          vscode.window.showErrorMessage("Can not get the component list");
+          window.showErrorMessage("Can not get the component list");
           return;
         }
 
         registryData = newRegistryData;
       }
 
-      const selectedComponent = await vscode.window.showQuickPick(registryData, {
+      const selectedComponent = await window.showQuickPick(registryData, {
         matchOnDescription: true,
       });
 
@@ -97,22 +102,33 @@ export function activate(context: vscode.ExtensionContext) {
         return;
       }
 
-      const componentDocLink = getComponentDocLink(selectedComponent.label);
-      vscode.env.openExternal(vscode.Uri.parse(componentDocLink));
+      const componentDocLink = getComponentDocLink(selectedComponent.label, localStorageVal);
+      env.openExternal(Uri.parse(componentDocLink));
     }),
-    vscode.commands.registerCommand(commands.reloadComponentList, async () => {
-      const newRegistryData = await getRegistry();
+    commands.registerCommand(extCommands.reloadComponentList, async () => {
+      const newRegistryData = await getRegistry(localStorageVal);
 
       if (!newRegistryData) {
-        vscode.window.showErrorMessage("Can not get the component list");
+        window.showErrorMessage("Can not get the component list");
         return;
       }
 
       registryData = newRegistryData;
-      vscode.window.showInformationMessage("shadcn/solid: Reloaded components");
+      window.showInformationMessage("shadcn/solid: Reloaded components");
     }),
-    vscode.commands.registerCommand(commands.gotoDoc, async () => {
-      vscode.env.openExternal(vscode.Uri.parse(shadCnDocUrl));
+    commands.registerCommand(extCommands.gotoDoc, async () => {
+      const shadCnDocUrl = localStorageVal === "solid-ui" ? "https://solid-ui-components.vercel.app/docs" : 'https://shadcn-solid.com/docs';
+      env.openExternal(Uri.parse(shadCnDocUrl));
+    }),
+
+    commands.registerCommand(extCommands.selectUIFramework, async () => {
+      let storageManager = new LocalStorageService(context.globalState);
+      const uiFrameworks = ['shadcn-solid', 'solid-ui'];
+      const selectedUIFramework = await window.showQuickPick(uiFrameworks);
+      if (!selectedUIFramework) {return;}
+      window.showInformationMessage(selectedUIFramework);
+      storageManager.setValue<string>('selectedUIFramework', selectedUIFramework);
+      await commands.executeCommand('workbench.action.reloadWindow');
     }),
   ];
 
@@ -120,4 +136,4 @@ export function activate(context: vscode.ExtensionContext) {
 }
 
 // This method is called when your extension is deactivated
-export function deactivate() {}
+export function deactivate() { }

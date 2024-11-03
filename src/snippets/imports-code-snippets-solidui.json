@@ -1,7 +1,7 @@
 {
     "Accordion": {
         "prefix": [
-            "shadcn-i-accordion",
+            "solid-ui-i-accordion",
             "cni-accordion"
         ],
         "body": [
@@ -12,21 +12,21 @@
             "  AccordionTrigger",
             "} from \"~/components/ui/accordion\""
         ],
-        "description": "https://shadcn-solid.com/docs/components/button"
+        "description": "https://solid-ui-components.vercel.app/docs/components/button"
     },
     "Alert": {
         "prefix": [
-            "shadcn-i-alert",
+            "solid-ui-i-alert",
             "cni-alert"
         ],
         "body": [
             "import { Alert, AlertDescription, AlertTitle } from \"~/components/ui/alert\""
         ],
-        "description": "https://shadcn-solid.com/docs/components/alert"
+        "description": "https://solid-ui-components.vercel.app/docs/components/alert"
     },
     "Alert Dialog": {
         "prefix": [
-            "shadcn-i-alert-dialog",
+            "solid-ui-i-alert-dialog",
             "cni-alert-dialog"
         ],
         "body": [
@@ -38,43 +38,92 @@
             "  AlertDialogTrigger",
             "} from \"~/registry/ui/alert-dialog\""
         ],
-        "description": "https://shadcn-solid.com/docs/components/alert-dialog"
+        "description": "https://solid-ui-components.vercel.app/docs/components/alert-dialog"
+    },
+    "Aspect Ratio": {
+        "prefix": [
+            "solid-ui-i-aspect-ratio",
+            "cni-aspect-ratio"
+        ],
+        "body": [
+            "import { AspectRatio } from \"~/components/ui/aspect-ratio\""
+        ],
+        "description": "https://solid-ui-components.vercel.app/docs/components/aspect-ratio"
     },
     "Avatar": {
         "prefix": [
-            "shadcn-i-avatar",
+            "solid-ui-i-avatar",
             "cni-avatar"
         ],
         "body": [
             "import { Avatar, AvatarFallback, AvatarImage } from \"~/components/ui/avatar\""
         ],
-        "description": "https://shadcn-solid.com/docs/components/avatar"
+        "description": "https://solid-ui-components.vercel.app/docs/components/avatar"
     },
     "Badge": {
         "prefix": [
-            "shadcn-i-badge",
+            "solid-ui-i-badge",
             "cni-badge"
         ],
         "body": [
             "import { Badge } from \"~/components/ui/badge\"",
             ""
         ],
-        "description": "https://shadcn-solid.com/docs/components/badge"
+        "description": "https://solid-ui-components.vercel.app/docs/components/badge"
+    },
+    "Badge Delta": {
+        "prefix": [
+            "solid-ui-i-badge-delta",
+            "cni-badge-delta"
+        ],
+        "body": [
+            "import { BadgeDelta } from \"~/components/ui/badge-delta\"",
+            ""
+        ],
+        "description": "https://solid-ui-components.vercel.app/docs/components/badge-delta"
+    },
+    "Breadcrumb": {
+        "prefix": [
+            "solid-ui-i-breadcrumb",
+            "cni-breadcrumb"
+        ],
+        "body": [
+            "import {",
+            "  Breadcrumb,",
+            "  BreadcrumbItem,",
+            "  BreadcrumbLink,",
+            "  BreadcrumbList,",
+            "  BreadcrumbSeparator",
+            "} from \"~/components/ui/breadcrumb\"",
+            ""
+        ],
+        "description": "https://solid-ui-components.vercel.app/docs/components/breadcrumb"
     },
     "Button": {
         "prefix": [
-            "shadcn-i-button",
+            "solid-ui-i-button",
             "cni-button"
         ],
         "body": [
             "import { Button } from \"~/components/ui/button\"",
             ""
         ],
-        "description": "https://shadcn-solid.com/docs/components/button"
+        "description": "https://solid-ui-components.vercel.app/docs/components/button"
+    },
+    "Callout": {
+        "prefix": [
+            "solid-ui-i-callout",
+            "cni-callout"
+        ],
+        "body": [
+            "import { Callout, CalloutContent, CalloutTitle } from \"~/components/ui/callout\"",
+            ""
+        ],
+        "description": "https://solid-ui-components.vercel.app/docs/components/callout"
     },
     "Card": {
         "prefix": [
-            "shadcn-i-card",
+            "solid-ui-i-card",
             "cni-card"
         ],
         "body": [
@@ -88,33 +137,71 @@
             "} from \"~/components/ui/card\"",
             ""
         ],
-        "description": "https://shadcn-solid.com/docs/components/card"
+        "description": "https://solid-ui-components.vercel.app/docs/components/card"
+    },
+    "Carousel": {
+        "prefix": [
+            "solid-ui-i-carousel",
+            "cni-carousel"
+        ],
+        "body": [
+            "import {",
+            "  Carousel,",
+            "  CarouselContent,",
+            "  CarouselItem,",
+            "  CarouselNext,",
+            "  CarouselPrevious",
+            "} from \"~/components/ui/carousel\"",
+            ""
+        ],
+        "description": "https://solid-ui-components.vercel.app/docs/components/carousel"
     },
     "Checkbox": {
         "prefix": [
-            "shadcn-i-checkbox",
+            "solid-ui-i-checkbox",
             "cni-checkbox"
         ],
         "body": [
             "import { Checkbox } from \"~/components/ui/checkbox\"",
             ""
         ],
-        "description": "https://shadcn-solid.com/docs/components/checkbox"
+        "description": "https://solid-ui-components.vercel.app/docs/components/checkbox"
     },
     "Collapsible": {
         "prefix": [
-            "shadcn-i-collapsible",
+            "solid-ui-i-collapsible",
             "cni-collapsible"
         ],
         "body": [
             "import { Collapsible, CollapsibleContent, CollapsibleTrigger } from \"~/components/ui/collapsible\"",
             ""
         ],
-        "description": "https://shadcn-solid.com/docs/components/collapsible"
+        "description": "https://solid-ui-components.vercel.app/docs/components/collapsible"
+    },
+    "Combobox": {
+        "prefix": [
+            "solid-ui-i-combobox",
+            "cni-combobox"
+        ],
+        "body": [
+            "import {",
+            "  ComboboxContent,",
+            "  ComboboxControl,",
+            "  ComboboxInput,",
+            "  ComboboxItem,",
+            "  ComboboxItemIndicator,",
+            "  ComboboxItemLabel,",
+            "  ComboboxRoot,",
+            "  ComboboxSection,",
+            "  ComboboxTrigger",
+            "} from \"~/registry/ui/combobox\"",
+            ""
+        ],
+        "description": "https://solid-ui-components.vercel.app/docs/components/combobox"
     },
     "Context Menu": {
         "prefix": [
-            "shadcn-i-context-menu",
+            "solid-ui-i-context-menu",
             "cni-context-menu"
         ],
         "body": [
@@ -128,11 +215,22 @@
             "} from \"~/components/ui/context-menu\"",
             ""
         ],
-        "description": "https://shadcn-solid.com/docs/components/context-menu"
+        "description": "https://solid-ui-components.vercel.app/docs/components/context-menu"
+    },
+    "Delta Bar": {
+        "prefix": [
+            "solid-ui-i-delta-bar",
+            "cni-delta-bar"
+        ],
+        "body": [
+            "import { DeltaBar } from \"~/components/ui/delta-bar\"",
+            ""
+        ],
+        "description": "https://solid-ui-components.vercel.app/docs/components/delta-bar"
     },
     "Dialog": {
         "prefix": [
-            "shadcn-i-dialog",
+            "solid-ui-i-dialog",
             "cni-dialog"
         ],
         "body": [
@@ -147,11 +245,11 @@
             "} from \"~/components/ui/dialog\"",
             ""
         ],
-        "description": "https://shadcn-solid.com/docs/components/dialog"
+        "description": "https://solid-ui-components.vercel.app/docs/components/dialog"
     },
     "Drawer": {
         "prefix": [
-            "shadcn-i-drawer",
+            "solid-ui-i-drawer",
             "cni-drawer"
         ],
         "body": [
@@ -162,16 +260,16 @@
             "  DrawerDescription,",
             "  DrawerFooter,",
             "  DrawerHeader,",
-            "  DrawerLabel,",
+            "  DrawerTitle,",
             "  DrawerTrigger",
-            "} from \"@/components/ui/drawer\"",
+            "} from \"~/components/ui/drawer\"",
             ""
         ],
-        "description": "https://shadcn-solid.com/docs/components/drawer"
+        "description": "https://solid-ui-components.vercel.app/docs/components/drawer"
     },
     "Dropdown Menu": {
         "prefix": [
-            "shadcn-i-dropdown-menu",
+            "solid-ui-i-dropdown-menu",
             "cni-dropdown-menu"
         ],
         "body": [
@@ -185,54 +283,44 @@
             "} from \"~/components/ui/dropdown-menu\"",
             ""
         ],
-        "description": "https://shadcn-solid.com/docs/components/dropdown-menu"
+        "description": "https://solid-ui-components.vercel.app/docs/components/dropdown-menu"
     },
     "Hover Card": {
         "prefix": [
-            "shadcn-i-hover-card",
+            "solid-ui-i-hover-card",
             "cni-hover-card"
         ],
         "body": [
             "import { HoverCard, HoverCardContent, HoverCardTrigger } from \"~/components/ui/hover-card\"",
             ""
         ],
-        "description": "https://shadcn-solid.com/docs/components/hover-card"
-    },
-    "Input": {
-        "prefix": [
-            "shadcn-i-input",
-            "cni-input"
-        ],
-        "body": [
-            "import { Input } from \"~/components/ui/input\"",
-            ""
-        ],
-        "description": "https://shadcn-solid.com/docs/components/input"
-    },
-    "Image": {
-        "prefix": [
-            "shadcn-i-image",
-            "cni-image"
-        ],
-        "body": [
-            "import { ImageRoot, ImageFallback, Image } from \"@/components/ui/image\";"
-        ],
-        "description": "https://shadcn-solid.com/docs/components/image"
+        "description": "https://solid-ui-components.vercel.app/docs/components/hover-card"
     },
     "Label": {
         "prefix": [
-            "shadcn-i-label",
+            "solid-ui-i-label",
             "cni-label"
         ],
         "body": [
             "import { Label } from \"~/components/ui/label\"",
             ""
         ],
-        "description": "https://shadcn-solid.com/docs/components/label"
+        "description": "https://solid-ui-components.vercel.app/docs/components/label"
+    },
+    "Input": {
+        "prefix": [
+            "solid-ui-i-input",
+            "cni-input"
+        ],
+        "body": [
+            "import { Input } from \"~/components/ui/input\"",
+            ""
+        ],
+        "description": "https://solid-ui-components.vercel.app/docs/components/input"
     },
     "Menu Bar": {
         "prefix": [
-            "shadcn-i-menu-bar",
+            "solid-ui-i-menu-bar",
             "cni-menu-bar"
         ],
         "body": [
@@ -247,11 +335,11 @@
             "} from \"~/components/ui/menubar\"",
             ""
         ],
-        "description": "https://shadcn-solid.com/docs/components/menu-bar"
+        "description": "https://solid-ui-components.vercel.app/docs/components/menu-bar"
     },
     "Navigation Menu": {
         "prefix": [
-            "shadcn-i-navigation-menu",
+            "solid-ui-i-navigation-menu",
             "cni-navigation-menu"
         ],
         "body": [
@@ -264,30 +352,27 @@
             "  NavigationMenuTrigger",
             "} from \"~/components/ui/navigation-menu\""
         ],
-        "description": "https://shadcn-solid.com/docs/components/navigation-menu"
+        "description": "https://solid-ui-components.vercel.app/docs/components/navigation-menu"
     },
     "Number Field": {
         "prefix": [
-            "shadcn-i-number-field",
+            "solid-ui-i-number-field",
             "cni-number-field"
         ],
         "body": [
             "import {",
             "  NumberField,",
             "  NumberFieldDecrementTrigger,",
-            "  NumberFieldDescription,",
             "  NumberFieldGroup,",
             "  NumberFieldIncrementTrigger,",
-            "  NumberFieldInput,",
-            "  NumberFieldLabel",
-            "} from \"@components/ui/number-field\""
+            "  NumberFieldInput",
+            "} from \"~/registry/ui/number-field\""
         ],
-        "description": "https://shadcn-solid.com/docs/components/number-field"
+        "description": "https://solid-ui-components.vercel.app/docs/components/number-field"
     },
-
     "OTP Field": {
         "prefix": [
-            "shadcn-i-otp-field",
+            "solid-ui-i-otp-field",
             "cni-otp-field"
         ],
         "body": [
@@ -297,14 +382,13 @@
             "  OTPFieldInput,",
             "  OTPFieldSeparator,",
             "  OTPFieldSlot",
-            "} from \"@/components/ui/otp-field\";"
+            "} from \"~/registry/ui/otp-field\""
         ],
-        "description": "https://shadcn-solid.com/docs/components/otp-field"
+        "description": "https://solid-ui-components.vercel.app/docs/components/otp-field"
     },
-
     "Pagination": {
         "prefix": [
-            "shadcn-i-pagination",
+            "solid-ui-i-pagination",
             "cni-pagination"
         ],
         "body": [
@@ -319,51 +403,51 @@
             "} from \"~/components/ui/pagination\"",
             ""
         ],
-        "description": "https://shadcn-solid.com/docs/components/pagination"
+        "description": "https://solid-ui-components.vercel.app/docs/components/pagination"
     },
     "Popover": {
         "prefix": [
-            "shadcn-i-popover",
+            "solid-ui-i-popover",
             "cni-popover"
         ],
         "body": [
             "import { Popover, PopoverContent, PopoverTrigger } from \"~/components/ui/popover\"",
             ""
         ],
-        "description": "https://shadcn-solid.com/docs/components/popover"
+        "description": "https://solid-ui-components.vercel.app/docs/components/popover"
     },
     "Progress": {
         "prefix": [
-            "shadcn-i-progress",
+            "solid-ui-i-progress",
             "cni-progress"
         ],
         "body": [
             "import { Progress, ProgressValue, ProgressValueLabel } from \"~/components/ui/progress\"",
             ""
         ],
-        "description": "https://shadcn-solid.com/docs/components/progress"
+        "description": "https://solid-ui-components.vercel.app/docs/components/progress"
     },
     "Radio Group": {
         "prefix": [
-            "shadcn-i-radio-group",
+            "solid-ui-i-radio-group",
             "cni-radio-group"
         ],
         "body": [
             "import { RadioGroup, RadioGroupItem, RadioGroupItemLabel } from \"~/components/ui/radio-group\"",
             ""
         ],
-        "description": "https://shadcn-solid.com/docs/components/radio-group"
+        "description": "https://solid-ui-components.vercel.app/docs/components/radio-group"
     },
     "Resizable": {
         "prefix": [
-            "shadcn-i-resizable",
+            "solid-ui-i-resizable",
             "cni-resizable"
         ],
         "body": [
-    "import { Resizable, ResizablePanel, ResizableHandle } from \"@/components/ui/resizable\";",
-    ""
+            "import { Resizable, ResizableHandle, ResizablePanel } from \"~/components/ui/resizable\"",
+            ""
         ],
-        "description": "https://shadcn-solid.com/docs/components/resizable"
+        "description": "https://solid-ui-components.vercel.app/docs/components/resizable"
     },
     "Select": {
         "prefix": [
@@ -379,22 +463,22 @@
             "} from \"~/components/ui/select\"",
             ""
         ],
-        "description": "https://shadcn-solid.com/docs/components/select"
+        "description": "https://solid-ui-components.vercel.app/docs/components/select"
     },
     "Separator": {
         "prefix": [
-            "shadcn-i-separator",
+            "solid-ui-i-separator",
             "cni-separator"
         ],
         "body": [
             "import { Separator } from \"~/components/ui/separator\"",
             ""
         ],
-        "description": "https://shadcn-solid.com/docs/components/separator"
+        "description": "https://solid-ui-components.vercel.app/docs/components/separator"
     },
     "Sheet": {
         "prefix": [
-            "shadcn-i-sheet",
+            "solid-ui-i-sheet",
             "cni-sheet"
         ],
         "body": [
@@ -408,44 +492,44 @@
             "} from \"~/components/ui/sheet\"",
             ""
         ],
-        "description": "https://shadcn-solid.com/docs/components/sheet"
+        "description": "https://solid-ui-components.vercel.app/docs/components/sheet"
     },
     "Skeleton": {
         "prefix": [
-            "shadcn-i-skeleton",
+            "solid-ui-i-skeleton",
             "cni-skeleton"
         ],
         "body": [
             "import { Skeleton } from \"~/components/ui/skeleton\"",
             ""
         ],
-        "description": "https://shadcn-solid.com/docs/components/skeleton"
+        "description": "https://solid-ui-components.vercel.app/docs/components/skeleton"
     },
     "Slider": {
         "prefix": [
-            "shadcn-i-slider",
+            "solid-ui-i-slider",
             "cni-slider"
         ],
         "body": [
             "import { Slider, SliderFill, SliderThumb, SliderTrack } from \"~/components/ui/slider\"",
             ""
         ],
-        "description": "https://shadcn-solid.com/docs/components/slider"
+        "description": "https://solid-ui-components.vercel.app/docs/components/slider"
     },
     "Switch": {
         "prefix": [
-            "shadcn-i-switch",
+            "solid-ui-i-switch",
             "cni-switch"
         ],
         "body": [
             "import { Switch } from \"~/components/ui/switch\"",
             ""
         ],
-        "description": "https://shadcn-solid.com/docs/components/switch"
+        "description": "https://solid-ui-components.vercel.app/docs/components/switch"
     },
     "Table": {
         "prefix": [
-            "shadcn-i-table",
+            "solid-ui-i-table",
             "cni-table"
         ],
         "body": [
@@ -460,75 +544,61 @@
             "} from \"~/components/ui/table\"",
             ""
         ],
-        "description": "https://shadcn-solid.com/docs/components/table"
+        "description": "https://solid-ui-components.vercel.app/docs/components/table"
     },
     "Tabs": {
         "prefix": [
-            "shadcn-i-tabs",
+            "solid-ui-i-tabs",
             "cni-tabs"
         ],
         "body": [
             "import { Tabs, TabsContent, TabsList, TabsTrigger } from \"~/components/ui/tabs\"",
             ""
         ],
-        "description": "https://shadcn-solid.com/docs/components/tabs"
-    },
-    "Textarea": {
-        "prefix": [
-            "shadcn-i-text-area",
-            "cni-text-area"
-        ],
-        "body": [
-            "import { TextArea } from \"@/components/ui/textarea\";",
-            "import { TextFieldRoot } from \"@/components/ui/textfield\";",
-            ""
-        ],
-        "description": "https://shadcn-solid.com/docs/components/textarea"
+        "description": "https://solid-ui-components.vercel.app/docs/components/tabs"
     },
     "Text Field": {
         "prefix": [
-            "shadcn-i-text-field",
+            "solid-ui-i-text-field",
             "cni-text-field"
         ],
         "body": [
-        "import { TextField, TextFieldRoot } from \"@/components/ui/textfield\";",
-        ""
+            "import { TextField, TextFieldInput } from \"~/components/ui/text-field\"",
+            ""
         ],
-        "description": "https://shadcn-solid.com/docs/components/text-field"
+        "description": "https://solid-ui-components.vercel.app/docs/components/text-field"
     },
 
     "Timeline": {
-        "prefix": ["shadcn-i-timeline", "cni-timeline"],
+        "prefix": ["solid-ui-i-timeline", "cni-timeline"],
         "body": [
             "import { Timeline } from \"~/components/ui/timeline\""
         ],
-        "description": "https://shadcn-solid.com/docs/components/timeline"
+        "description": "https://solid-ui-components.vercel.app/docs/components/timeline"
     },
     "Toggle": {
-        "prefix": ["shadcn-i-toggle", "cni-toggle"],
+        "prefix": ["solid-ui-i-toggle", "cni-toggle"],
         "body": [
-    "import { ToggleButton } from \"@/components/ui/toggle\";",
-    ""
+            "import { Toggle } from \"~/components/ui/toggle\""
         ],
-        "description": "https://shadcn-solid.com/docs/components/toggle"
+        "description": "https://solid-ui-components.vercel.app/docs/components/toggle"
     },
     "Toggle Group": {
-        "prefix": ["shadcn-i-toggle-group", "cni-toggle-group"],
+        "prefix": ["solid-ui-i-toggle-group", "cni-toggle-group"],
         "body": [
-    "import { ToggleGroup, ToggleGroupItem } from \"@/components/ui/toggle-group\";",
-    ""
+            "import { ToggleGroup, ToggleGroupItem } from \"~/components/ui/toggle-group\""
         ],
-        "description": "https://shadcn-solid.com/docs/components/toggle-group"
+        "description": "https://solid-ui-components.vercel.app/docs/components/toggle-group"
     },
     "Tooltip": {
         "prefix": [
-            "shadcn-i-tooltip",
+            "solid-ui-i-tooltip",
             "cni-tooltip"
         ],
         "body": [
             "import { Tooltip, TooltipContent, TooltipTrigger } from \"~/components/ui/tooltip\"",
             ""
         ],
-        "description": "https://shadcn-solid.com/docs/components/tooltip"
+        "description": "https://solid-ui-components.vercel.app/docs/components/tooltip"
     }
 }

@@ -51,6 +51,19 @@
         "language": "typescriptreact",
         "path": "./src/snippets/imports-code-snippets.json"
       },
+
+
+      {
+        "language": "javascriptreact",
+        "path": "./src/snippets/imports-code-snippets-solidui.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./src/snippets/imports-code-snippets-solidui.json"
+      },
+
+
+
       {
         "language": "javascriptreact",
         "path": "./src/snippets/usage-code-snippets.json"
@@ -58,6 +71,16 @@
       {
         "language": "typescriptreact",
         "path": "./src/snippets/usage-code-snippets.json"
+      },
+
+
+      {
+        "language": "javascriptreact",
+        "path": "./src/snippets/usage-code-snippets-solidui.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./src/snippets/usage-code-snippets-solidui.json"
       }
     ],
     "commands": [
@@ -87,7 +110,7 @@
       },
       {
         "command": "shadcn-solid.select-ui-framework",
-        "title": "shadcn/solid: Select UI framework"
+        "title": "shadcn/solid: Choose UI framework"
       }
     ]
   },
@@ -95,7 +118,7 @@
     "vscode:prepublish": "pnpm build",
     "generate:release": "npx changelogen@latest --major --release",
     "check-types": "tsc --noEmit",
-    "build": "pnpm run lint && node esbuild.js --production",
+    "build": "pnpm run lint:fix && node esbuild.js --production",
     "dev": "pnpm build -- --watch",
     "deploy:extension": "vsce publish --no-dependencies",
     "lint": "eslint src",
