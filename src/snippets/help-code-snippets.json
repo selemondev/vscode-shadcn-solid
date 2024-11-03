@@ -1,18 +1,18 @@
 {
-    "shadcn/solid help cn": {
-      "prefix": ["cn-help"],
+    "shadcn/solid help solid ui": {
+      "prefix": ["cns-help"],
       "body": [
-        "// cni-[component] e.g. cni-button",
+        "// solid-ui-i-[component] e.g. solid-ui-i-button",
         "import { Button } from ~/components/ui/button'",
         "",
-        "// cnx-[component] e.g. cnx-button",
+        "// solid-ui-x-[component]-[component] e.g. solid-ui-x-button",
         "<Button> Submit </Button>",
         ""
       ]
     },
   
     "shadcn/solid help shadcn": {
-      "prefix": ["shadcn-help"],
+      "prefix": ["cns-help"],
       "body": [
         "// shadcn-i-[component] e.g. shadcn-i-button",
         "import { Button } from ~/components/ui/button'",

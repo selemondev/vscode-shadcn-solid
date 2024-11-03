@@ -15,12 +15,10 @@ type Component = {
   detail?: string;
 };
 
-export const shadCnDocUrl = "https://solid-ui-components.vercel.app/docs";
-
 export type Components = Component[];
 
-export const getRegistry = async (): Promise<Components | null> => {
-  const reqUrl = "https://solid-ui-components.vercel.app/registry/index.json";
+export const getRegistry = async (val: string ): Promise<Components | null> => {
+  const reqUrl = val === "solid-ui" ? "https://solid-ui-components.vercel.app/registry/index.json" : "https://shadcn-solid.com/registry/index.json";
   const [res, err] = await to(ofetch(reqUrl));
 
   if (err || !res) {
@@ -45,35 +43,36 @@ export const getRegistry = async (): Promise<Components | null> => {
   return components;
 };
 
-export const getInstallCmd = async (components: string[]) => {
+export const getInstallCmd = async (components: string[], val: string) => {
   const packageManager = await detectPackageManager();
   const componentStr = components.join(" ");
 
   if (packageManager === "bun") {
-    return `bunx solidui-cli@latest add ${componentStr}`;
+    return val === "solid-ui" ? `bunx solidui-cli@latest add ${componentStr}` : `bunx shadcn-solid@latest add ${componentStr}` ;
   }
 
   if (packageManager === "pnpm") {
-    return `pnpm dlx solidui-cli@latest add ${componentStr}`;
+    return val === "solid-ui" ? `pnpm dlx solidui-cli@latest add ${componentStr}` : `pnpm dlx shadcn-solid@latest add ${componentStr}`;
   }
 
-  return `npx solidui-cli@latest add ${componentStr}`;
+  return val === "solid-ui" ? `npx solidui-cli@latest add ${componentStr}` : `npx shadcn-solid@latest add ${componentStr}`;
 };
 
-export const getInitCmd = async () => {
+export const getInitCmd = async (val: string) => {
   const packageManager = await detectPackageManager();
 
   if (packageManager === "bun") {
-    return "bunx solidui-cli@latest init";
+    return val === "solid-ui" ? "bunx solidui-cli@latest init" : "bunx shadcn-solid@latest init";
   }
 
   if (packageManager === "pnpm") {
-    return "pnpm dlx solidui-cli@latest init";
+    return val === "solid-ui" ? "pnpm dlx solidui-cli@latest init" : "pnpm dlx shadcn-solid@latest init";
   }
 
-  return "npx solidui-cli@latest init";
+  return val === "solid-ui" ? "npx solidui-cli@latest init" : "npx shadcn-solid@latest init";
 };
 
-export const getComponentDocLink = (component: string) => {
+export const getComponentDocLink = (component: string, val: string) => {
+  const shadCnDocUrl = val === "solid-ui" ? "https://solid-ui-components.vercel.app/docs" : 'https://shadcn-solid.com/docs';
   return `${shadCnDocUrl}/components/${component}`;
 };
