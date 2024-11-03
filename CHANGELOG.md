@@ -4,6 +4,31 @@ All notable changes to the "shadcn-solid" extension will be documented in this f
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## v0.1.0
+
+[compare changes](https://github.com/selemondev/vscode-shadcn-solid/compare/v0.0.9...v0.1.0)
+
+### 🚀 Enhancements
+
+- Use esbuild instead of tsup ([bc3f83c](https://github.com/selemondev/vscode-shadcn-solid/commit/bc3f83c))
+- Add support for Shadcn Solid ([81be541](https://github.com/selemondev/vscode-shadcn-solid/commit/81be541))
+
+### 💅 Refactors
+
+- Eslint config ([7d9e156](https://github.com/selemondev/vscode-shadcn-solid/commit/7d9e156))
+
+### 📖 Documentation
+
+- Update import and usage docs ([1445584](https://github.com/selemondev/vscode-shadcn-solid/commit/1445584))
+
+### 🏡 Chore
+
+- Update dependencies ([22c5336](https://github.com/selemondev/vscode-shadcn-solid/commit/22c5336))
+
+### ❤️ Contributors
+
+- Selemondev <selemondev19@gmail.com>
+
 ## v0.0.8
 
 [compare changes](https://github.com/selemondev/vscode-shadcn-solid/compare/v0.0.1...v0.0.8)
