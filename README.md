@@ -105,3 +105,5 @@ All credits go to the creators of these amazing projects:
 - [Shadcn UI](https://ui.shadcn.com) for creating this beautiful project.
 - [Shadcn solid](https://solid-ui-components.vercel.app/) for creating the Solid port of Shadcn UI.
 - [Kobalte](https://kobalte.dev/docs/core/overview/introduction) for doing all the hard work to make sure components are accessible.
+- [Suhel Makkad](https://github.com/SuhelMakkad/vscode-shadcn-ui) for creating the Shadcn UI VSCode extension.
+- [Neeraj Dalal](https://github.com/nrjdalal/shadcn-ui-snippets) for creating the Shadcn UI Snippets VSCode extension.
