@@ -20,7 +20,7 @@ importers:
         version: 18.19.64
       '@types/vscode':
         specifier: ^1.95.0
-        version: 1.95.0
+        version: 1.104.0
       '@typescript-eslint/eslint-plugin':
         specifier: ^8.12.2
         version: 8.12.2(@typescript-eslint/parser@8.12.2(eslint@9.14.0)(typescript@5.6.3))(eslint@9.14.0)(typescript@5.6.3)
@@ -258,8 +258,8 @@ packages:
   '@types/node@18.19.64':
     resolution: {integrity: sha512-955mDqvO2vFf/oL7V3WiUtiz+BugyX8uVbaT2H8oj3+8dRyH2FLiNdowe7eNqRM7IOIZvzDH76EoAT+gwm6aIQ==}
 
-  '@types/vscode@1.95.0':
-    resolution: {integrity: sha512-0LBD8TEiNbet3NvWsmn59zLzOFu/txSlGxnv5yAFHCrhG9WvAnR3IvfHzMOs2aeWqgvNjq9pO99IUw8d3n+unw==}
+  '@types/vscode@1.104.0':
+    resolution: {integrity: sha512-0KwoU2rZ2ecsTGFxo4K1+f+AErRsYW0fsp6A0zufzGuhyczc2IoKqYqcwXidKXmy2u8YB2GsYsOtiI9Izx3Tig==}
 
   '@typescript-eslint/eslint-plugin@8.12.2':
     resolution: {integrity: sha512-gQxbxM8mcxBwaEmWdtLCIGLfixBMHhQjBqR8sVWNTPpcj45WlYL2IObS/DNMLH1DBP0n8qz+aiiLTGfopPEebw==}
@@ -847,7 +847,7 @@ snapshots:
     dependencies:
       undici-types: 5.26.5
 
-  '@types/vscode@1.95.0': {}
+  '@types/vscode@1.104.0': {}
 
   '@typescript-eslint/eslint-plugin@8.12.2(@typescript-eslint/parser@8.12.2(eslint@9.14.0)(typescript@5.6.3))(eslint@9.14.0)(typescript@5.6.3)':
     dependencies:
