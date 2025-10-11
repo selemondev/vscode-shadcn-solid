@@ -130,5 +130,5 @@
     "ofetch": "^1.4.1",
     "pkg-types": "^1.2.1"
   },
-  "packageManager": "pnpm@9.12.3"
+  "packageManager": "pnpm@9.15.9"
 }
